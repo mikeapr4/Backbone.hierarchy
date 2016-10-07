@@ -42,21 +42,20 @@
     a.push.apply(a, b);
   };
 
-
-  var original_Collection_constructor = Backbone.Collection.prototype.constructor;
-  var original_Model_constructor = Backbone.Model.prototype.constructor;
+  var original_Collection = Backbone.Collection;
+  var original_Model = Backbone.Model;
 
   /**
    * @class Backbone.Collection
    */
-  _.extend(Backbone.Collection.prototype, {
+  Backbone.Collection = Backbone.Collection.extend({
 
     bubblingChangeEvent: true,
     parent: null,
 
     constructor: function (models, options) {
       this.initialize = _.wrap(this.initialize, this.initializeRelated);
-      original_Collection_constructor.call(this, models, options);
+      original_Collection.call(this, models, options);
     },
 
     /**
@@ -133,7 +132,7 @@
   /**
    * @class Backbone.Model
    */
-  _.extend(Backbone.Model.prototype, {
+  Backbone.Model = Backbone.Model.extend({
 
     bubblingChangeEvent: true,
     parent             : null,
@@ -141,7 +140,7 @@
 
     constructor: function (attributes, options) {
       this.initialize = _.wrap(this.initialize, this.initializeRelated);
-      original_Model_constructor.apply(this, arguments);
+      original_Model.apply(this, arguments);
     },
 
     linkParent: function(parent, attrs) {

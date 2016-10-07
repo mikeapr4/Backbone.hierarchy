@@ -1,4 +1,4 @@
-var Backbone = require('../backbone.hierarchy.js');
+var Backbone = require('../backbone.hierarchy.js'), _ = require('underscore');
 
 describe('hierarchical models', function() {
   var cls = {}, json, hotels, hotel, rooms, room;
@@ -127,7 +127,7 @@ describe('hierarchical models', function() {
      * but the underlying memory references are different!
      */
 
-    var changes = _.deepClone(hotel.toJSON());
+    var changes = JSON.parse(JSON.stringify(hotel.toJSON()));
     hotel.set(changes);
 
     /**
