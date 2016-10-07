@@ -1,0 +1,39 @@
+{
+  "name": "backbone.hierarchy",
+  "version": "0.1.0",
+  "main": "backbone.hierarchy.js",
+  "description": "Connect and sync Collection/Model objects in a hierarchy matching their JSON structure.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "backbone",
+    "hierarchy",
+    "nested",
+    "model"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeapr4/Backbone.hierarchy.git"
+  },
+  "scripts": {
+    "test": "jasmine spec/spec.js"
+  },
+  "author": "Michael Gallagher <https://github.com/mikeapr4>",
+  "contributors": "Listed at <https://github.com/mikeapr4/Backbone.hierarchy/contributors>",
+  "bugs": {
+    "url": "https://github.com/mikeapr4/Backbone.hierarchy/issues"
+  },
+  "homepage": "https://github.com/mikeapr4/Backbone.hierarchy",
+  "peerDependencies": {
+    "backbone": "1.3.3",
+    "underscore": "1.8.3"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "backbone": "1.3.3",
+    "jasmine": "^2.5.2",
+    "jquery": "^2.2.1",
+    "underscore": "1.8.3"
+  }
+}
