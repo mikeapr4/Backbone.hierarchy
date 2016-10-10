@@ -1,6 +1,7 @@
 /**
  * Backbone.Hierarchy
  * Version 0.1.0
+ * MIT license
  *
  * https://github.com/mikeapr4/Backbone.hierarchy
  */
