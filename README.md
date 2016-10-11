@@ -122,6 +122,13 @@ Backbone.hierarchy is designed to be small and loosely coupled. It is also more 
 
 The following alternatives may suit some projects:
 
+* [Backbone Nested Models](https://github.com/blittle/backbone-nested-models)
 * [Backbone-relational](https://github.com/PaulUithol/Backbone-relational)
 * [Supermodel](https://github.com/pathable/supermodel)
 * [Backbone-Nested](https://github.com/afeld/backbone-nested)
+
+### Difference from Backbone Nested Models
+
+At first glance these projects may seem almost identical (great minds think...), however Backbone.hierarchy was designed not to interfere with the underlying storage of Models/Collections. It synchronizes the object hierarchy based on triggered events. This was done to ensure existing functionality continued to behave in the same way.
+
+However the Backbone Nested Models project is longer in development with more contributors, worth considering if it meets your needs.
